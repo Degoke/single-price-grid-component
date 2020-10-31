@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 70vw;
+  margin: 10vh auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.wrapper-box {
+  padding: 0.5rem 1rem;
+}
+
+.box-1 {
+  background-color: white;
+  color: hsl(218, 22%, 67%);
+}
+
+.box-1 h3 {
+  color: hsl(179, 62%, 43%);
+}
+
+.box-1 h4 {
+  color: hsl(71, 73%, 54%);
+}
+
+.box-2 {
+  background: hsl(179, 62%, 43%);
+  color: white;
+}
+
+.box-3 {
+  background: hsl(179, 62%, 48%);
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  background: hsl(71, 73%, 54%);
+  padding: 0.6rem 0;
+  border: none;
+  color: white;
+  border-radius: 2%;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: hsl(71, 73%, 64%);
+}
+
+.big-number {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.faint-text {
+  opacity: 0.7;
+}
+
+@media all and (min-width: 800px) {
+  .wrapper {
+    max-width: 45vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "area1 area1"
+      "area2 area3";
+  }
+
+  .box-1 {
+    grid-area: area1;
+  }
+
+  .box-2 {
+    grid-area: area2;
+  }
+
+  .box-3 {
+    grid-area: area3;
+  }
+
+  .wrapper-box {
+    padding: 1.5rem 2rem;
+  }
+}
